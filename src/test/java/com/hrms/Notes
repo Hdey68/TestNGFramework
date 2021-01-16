@@ -1,0 +1,87 @@
+Sprint #3
+
+US 12345 An admin user should be able to login with valid credentials
+
+
+US 12675 Title of HRMS should be displayed as “Human Management System”
+
+US 17666 Syntax Logo should be present on the login page
+US 17667 Error message “Invalid credentials” should be displayed when user enters invalid credentials
+
+
+username=Admin
+username=James
+
+/Users/syntax/IdeaProjects/Batch8/TestNGBasics/src/configs/configuration.properties
+
+MAVEN - build automation tool.
+For testers it used:
+
+Create a project structure (test/ java --> java related code\
+test/ resources --> resources we used to test)
+
+Manage project dependencies
+pom.xml - configuration file for maven projects
+
+
+System.getProperty(“user.dir”); ---> returns directory path from which JMV gets executed
+
+US 78676: admin user should be able to login into HRMS
+
+Maven - build automation tool
+TestNG - testing tool
+POM - design pattern to manage/mantain page element
+
+US 87979 admin user should be abe to add an employee to the hrms application
+
+
+US 78799 system should display error messages when invalid login is performed
+
+ Acceptance Criteria:
+
+ 1. When user enters valid/invalid username and invalid/valid password then display “Invalid credentials”
+
+ 2. When user lives password password field empty then dislay “Password cannot be empty”
+
+ 3. When user lives username field empty then dislay “Username cannot be empty”
+
+How to get entire data from excel file
+
+FileInputStream (path to the file)
+Object of XSSFWorkbook (fis)
+getSheet(name or index);
+get number of rows getPhysicalNumberOfRows()
+get number of cells getPhysicalNumberOfCell()
+create 2 nested for loop
+
+outer loop --> control rows
+inner loop --> control cols
+
+getRow(index).getCell(index).toString();
+
+Maven - build automation tool
+helps to build basic project structure
+manage dependencies
+execute test from comman line
+TestNG - testing tool
+to group tests
+to perform batch testing
+to get reports (time, number of passed vs failed tests)
+POM - design pattern
+manage/mantain page element
+for every page in the application we create a separate Java class
+(using @FindBy and PageFactory)
+DDT - testing same functionlaity using different sets of data
+separate source code from data, so we change data it does not affect our source code
+HOW: through DataProvider and Excel
+
+-------------------------------------------
+groupping test case
+
+In java class we specify group
+To run groups we use xml
+
+listeners - listen to any happening event (pass, fail, skip, start, end) based on that we can modify a behaviour
+
+listeners class that implents ITestListener
+add it to the xml file

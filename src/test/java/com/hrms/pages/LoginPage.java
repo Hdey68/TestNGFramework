@@ -8,15 +8,24 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends CommonMethods {
 
     @FindBy(id="txtUsername")
-     public WebElement username;
+     public WebElement usernameBox;
 
     @FindBy(name="txtPassword")
-    public WebElement password;
+    public WebElement passwordBox;
 
     @FindBy(css="input#btnLogin")
     public WebElement loginBtn;
 
-   public LoginPage(){
-        PageFactory.initElements (CommonMethods.driver ,this );
+    @FindBy(id="spanMessage")
+    public WebElement errorMsg;
+
+    public LoginPage(){
+        PageFactory.initElements (driver ,this );
+    }
+    public void login(String username,String password){
+       sendText ( usernameBox,username );
+       sendText ( passwordBox,password );
+       click ( loginBtn );
+
     }
 }
